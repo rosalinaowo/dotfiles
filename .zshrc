@@ -1,15 +1,17 @@
 # rikka
 
-export EDITOR=nvim
+# export EDITOR=nvim
 
 #prompt
 eval "$(starship init zsh)"
 
 #aliases
 alias wholeshot='flameshot full --path ~/Immagini/Screeshot'
-alias ls='ls --color=auto'
+alias ls='exa'
 alias ll='exa -la'
+alias ..='cd ..'
 alias whenthe='/home/rikka/whenthe'
+alias update='sudo pacman -Syyu'
 
 #bindkey
 bindkey ";5C" forward-word

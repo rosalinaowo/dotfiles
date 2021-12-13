@@ -16,6 +16,7 @@ set scrolloff=10
 " ignore case when searching
 set ignorecase
 set smarttab
+set nobackup
 
 set cursorline
 highlight CursorLine cterm=NONE ctermbg=236 ctermfg=none guibg=Grey40
