@@ -19,7 +19,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'tpope/vim-rhubarb'
     Plug 'cohama/lexima.vim'
     Plug 'ryanoasis/vim-devicons'
-
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    
 if has("nvim")
   Plug 'neovim/nvim-lspconfig'
   Plug 'glepnir/lspsaga.nvim'

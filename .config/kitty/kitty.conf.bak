@@ -22,9 +22,8 @@
 #:     bold_font        Operator Mono Medium
 #:     italic_font      Operator Mono Book Italic
 #:     bold_italic_font Operator Mono Medium Italic
- #font_family mononoki Nerd Font Mono
- font_family Fira Code Regular
- 
+ font_family mononoki Nerd Font Mono
+
 # font_size 11.0
 
 #: Font size (in pts)
@@ -761,7 +760,7 @@
 
 #: The foreground and background colors
 
- background_opacity 0.6
+ background_opacity 0.9
 
 #: The opacity of the background. A number between 0 and 1, where 1 is
 #: opaque and 0 is fully transparent.  This will only work if
@@ -1510,4 +1509,9 @@
 
 #: }}}
 # include custom.conf
-include themes/dark.conf
+
+
+# BEGIN_KITTY_THEME
+# Dracula
+include current-theme.conf
+# END_KITTY_THEME

@@ -1,0 +1,8 @@
+{
+    "languageserver": {
+        "kotlin": {
+            "command": "/home/rikka/KotlinLanguageServer/server/build/install/server/bin/kotlin-language-server",
+            "filetypes": ["kotlin"]
+        }
+    }
+}
