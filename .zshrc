@@ -15,14 +15,14 @@ alias ls='exa -a --color=always --group-directories-first --icons'
 alias l='exa --color=always --group-directories-first --icons'
 alias ..='cd ..'
 alias whenthe='/home/rikka/whenthe'
-alias update='sudo pacman -Syyu'
+alias update='sudo pacman -Syu'
 alias dsmotion='ds4drv --hidraw --udp'
 alias pipes='pipes.sh'
 alias cuddle='kitty icat /home/rikka/Immagini/cuddling.jpg'
 alias cbonsai='cbonsai -S'
+alias clock='tty-clock -c'
 
 # exports
-export WEATHER_CLI_API=f02d9864b8f9d375e654ce19d529f839
 export PATH="/home/rikka/.local/bin:$PATH"
 
 #bindkey
@@ -35,4 +35,4 @@ HISTSIZE=1000
 SAVEHIST=1000
 
 # autostart
-wal -qni Immagini/wallpapers/sky.jpg
+#wal -qni Immagini/wallpapers/sky.jpg
