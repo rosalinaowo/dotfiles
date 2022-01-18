@@ -39,7 +39,6 @@ no L N
 nnoremap <C-f> :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
-nmap tn :tabn<CR>
 
 " Adjust split size
 noremap <silent> <C-Left> :vertical resize +3<CR>

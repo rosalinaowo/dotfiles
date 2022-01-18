@@ -21,6 +21,15 @@ alias pipes='pipes.sh'
 alias cuddle='kitty icat /home/rikka/Immagini/cuddling.jpg'
 alias cbonsai='cbonsai -S'
 alias clock='tty-clock -c'
+alias getpath="find -type f | fzf | sed 's/^..//' | tr -d '\n' | xclip -selection c" 
+
+fcd() {
+	cd "$(find -type d | fzf)"
+}
+
+open() {
+	xdg-open "$(find -type f | fzf)"
+}
 
 # exports
 export PATH="/home/rikka/.local/bin:$PATH"
