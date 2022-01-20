@@ -22,6 +22,7 @@ alias cuddle='kitty icat /home/rikka/Immagini/cuddling.jpg'
 alias cbonsai='cbonsai -S'
 alias clock='tty-clock -c'
 alias getpath="find -type f | fzf | sed 's/^..//' | tr -d '\n' | xclip -selection c" 
+alias rec='ffmpeg -f x11grab -s 1920x1080 -i :0.0+1920,0 -f pulse -i default '
 
 fcd() {
 	cd "$(find -type d | fzf)"
