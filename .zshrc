@@ -2,6 +2,7 @@
 
 #prompt
 eval "$(starship init zsh)"
+#PS1="%F{yellow}λ %f%~ > "
 
 #default apps
 export TERMINAL='kitty'

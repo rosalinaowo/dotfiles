@@ -4,7 +4,7 @@ add_newline = true
 
 [character]
 #➜
-success_symbol = "[|>](bold yellow)"
+success_symbol = "[λ](bold yellow)"
 error_symbol = "[✖](bold red) "
 
 [hostname]
@@ -13,12 +13,6 @@ format = "[$hostname]($style) "
 trim_at = "-"
 style = "bold dimmed green"
 disabled = false
-
-#[time]
-#time_format = "%T"
-#format = "🚀 $time($style) "
-#style = "bright-white"
-#disabled = false
 
 [username]
 style_user = "bold dimmed blue"
