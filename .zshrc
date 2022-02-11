@@ -10,6 +10,7 @@ export BROWSER='brave'
 export EDITOR='nvim'
 
 #aliases
+alias szsh='source .zshrc' 
 alias wholeshot='flameshot full --path ~/Immagini/Screeshot'
 alias la='exa -la --color=always --group-directories-first --icons'
 alias ls='exa -a --color=always --group-directories-first --icons'
@@ -23,7 +24,9 @@ alias cuddle='kitty icat /home/rikka/Immagini/cuddling.jpg'
 alias cbonsai='cbonsai -S'
 alias clock='tty-clock -c'
 alias getpath="find -type f | fzf | sed 's/^..//' | tr -d '\n' | xclip -selection c" 
-alias rec='ffmpeg -f x11grab -s 1920x1080 -i :0.0+1920,0 -f pulse -i default '
+alias recv='ffmpeg -f x11grab -s 1920x1080 -i :0.0+1920,0 -f pulse -i default '
+alias reca='ffmpeg -f pulse -i default -b:a 128K'
+alias bn='$HOME/scripts/bunnyfetch'
 
 fcd() {
 	cd "$(find -type d | fzf)"
