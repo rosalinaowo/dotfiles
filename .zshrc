@@ -3,6 +3,7 @@
 #prompt
 eval "$(starship init zsh)"
 #PS1="%F{yellow}λ %f%~ > "
+#PS1="%F{green}%B%~/%b%f "
 
 #default apps
 export TERMINAL='kitty'
@@ -27,13 +28,10 @@ alias getpath="find -type f | fzf | sed 's/^..//' | tr -d '\n' | xclip -selectio
 alias recv='ffmpeg -f x11grab -s 1920x1080 -i :0.0+1920,0 -f pulse -i default '
 alias reca='ffmpeg -f pulse -i default -b:a 128K'
 alias bn='$HOME/scripts/bunnyfetch'
+alias open='xdg-open'
 
 fcd() {
 	cd "$(find -type d | fzf)"
-}
-
-open() {
-	xdg-open "$(find -type f | fzf)"
 }
 
 # exports
@@ -47,6 +45,3 @@ bindkey ";5D" backward-word
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
-
-# autostart
-#wal -qni Immagini/wallpapers/sky.jpg
