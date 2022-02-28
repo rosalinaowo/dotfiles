@@ -7,7 +7,7 @@ eval "$(starship init zsh)"
 
 #default apps
 export TERMINAL='kitty'
-export BROWSER='brave'
+export BROWSER='firefox'
 export EDITOR='nvim'
 
 #aliases
@@ -35,7 +35,7 @@ fcd() {
 }
 
 # exports
-export PATH="/home/rikka/.local/bin:$PATH"
+export PATH="/home/rikka/.local/bin:$HOME/.cargo/bin:$PATH"
 
 #bindkey
 bindkey ";5C" forward-word
