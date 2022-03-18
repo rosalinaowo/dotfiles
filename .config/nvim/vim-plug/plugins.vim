@@ -22,8 +22,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'kyazdani42/nvim-web-devicons'
     Plug 'romgrk/barbar.nvim'
     Plug 'ryanoasis/vim-devicons'
-    Plug 'joshdick/onedark.vim'
-    Plug 'drewtempelmeyer/palenight.vim'
 
 if has("nvim")
   Plug 'neovim/nvim-lspconfig'
