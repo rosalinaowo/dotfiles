@@ -1,11 +1,11 @@
 -- Rikka
 
-vim.opt.encoding="utf-8"
+vim.opt.encoding= "utf-8"
 vim.opt.number = true
 vim.bo.syntax = "enable"
 vim.opt.title = true
 vim.bo.autoindent = true
-vim.opt.background="dark"
+vim.opt.background= "dark"
 vim.opt.showcmd = true
 vim.opt.cmdheight = 1
 vim.opt.laststatus = 2
@@ -16,7 +16,7 @@ vim.opt.backup = false
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 vim.wo.cursorline = true
-vim.opt.mouse="a"
+vim.opt.mouse= "a"
 vim.cmd([[
 	set nocompatible
 	highlight CursorLine cterm=NONE ctermbg=236 ctermfg=none guibg=Grey40
