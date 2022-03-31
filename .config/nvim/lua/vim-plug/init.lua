@@ -13,5 +13,6 @@ vim.call('plug#begin', '~/.config/nvim/autoload/plugged')
     Plug 'kyazdani42/nvim-web-devicons'
     Plug 'romgrk/barbar.nvim'
     Plug 'ryanoasis/vim-devicons'
+    Plug 'morhetz/gruvbox'
 
 vim.call('plug#end')

@@ -1,0 +1,5 @@
+ncmpcpp_directory  = ~/.ncmpcpp
+autocenter_mode = yes
+display_bitrate = yes
+colors_enabled = yes
+allow_for_physical_item_deletion = yes

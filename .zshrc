@@ -24,6 +24,10 @@ alias clock='tty-clock -c -C 6'
 alias getpath="find -type f | fzf | sed 's/^..//' | tr -d '\n' | xclip -selection c" 
 alias bn='$HOME/scripts/bunnyfetch'
 alias open='xdg-open'
+alias reca='ffmpeg -f pulse -i default -y -v error -stats '
+alias tree='exa --tree --icons'
+alias ytmp3='yt-dlp -x --continue --add-metadata --embed-thumbnail --audio-format mp3 --audio-quality 0 --metadata-from-title="%(artist)s - %(title)s" --prefer-ffmpeg -o "%(title)s.%(ext)s"'
+alias v='nvim'
 
 # exports
 export PATH="/home/rikka/.local/bin:$HOME/.cargo/bin:$PATH"
