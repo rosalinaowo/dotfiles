@@ -60,6 +60,7 @@ return packer.startup(function(use)
   -- LSP
   --  use 'neovim/nvim-lspconfig'
 
+  -- Automatically set up your configuration after cloning packer.nvim
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end

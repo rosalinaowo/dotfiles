@@ -21,7 +21,12 @@ vim.opt.splitbelow = true
 vim.opt.splitright = true
 vim.wo.cursorline = true
 vim.opt.termguicolors = true
-vim.opt.mouse= "a"
+vim.opt.mouse = "a"
+vim.opt.clipboard = "unnamedplus"
+vim.opt.splitbelow = true
+vim.opt.splitright = true
+vim.opt.updatetime = 1000
+vim.wo.signcolumn = "yes"
 
 require('keybinds')
 require('plugins')
