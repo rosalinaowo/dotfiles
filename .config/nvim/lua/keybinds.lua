@@ -1,6 +1,8 @@
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
+vim.g.mapleader = ' '
+
 -- Dvorak-friendly keybinds
 --nvo
 map('n', 'd', 'h', opts)
@@ -18,8 +20,12 @@ map('n', '<C-f>', ':NERDTreeFocus<CR>', opts)
 map('n', '<C-n>', ':NerdTree<CR>', opts)
 map('n', '<C-t>', ':NERDTreeToggle<CR>', opts)
 
+-- Nvim-tree.lua
+map('n', '<leader>e', ':NvimTreeToggle<CR>', opts)
+map('n', '<leader>r', ':NvimTreeRefresh<CR>', opts)
+
 -- Split Size
---nvo
+
 map('n', '<C-Left>', ':vertical resize +3<CR>', opts)
 map('n', '<C-Right>', ':vertical resize -3<CR>', opts)
 map('n', '<C-Up>', ':resize +3<CR>', opts)

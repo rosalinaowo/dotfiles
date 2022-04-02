@@ -23,10 +23,12 @@ vim.wo.cursorline = true
 vim.opt.termguicolors = true
 vim.opt.mouse= "a"
 
-require('vim-plug')
 require('keybinds')
+require('plugins')
 require('lualine-config')
 require('barbar')
+require('nvim-tree').setup{}
+--require('lspconfig')
 
 vim.cmd([[
 	set nocompatible

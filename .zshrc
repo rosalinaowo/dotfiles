@@ -6,7 +6,7 @@ eval "$(starship init zsh)"
 #PS1="%F{green}%B%~/%b%f "
 
 #default apps
-export TERMINAL='kitty'
+export TERMINAL='wezterm'
 export BROWSER='firefox'
 export EDITOR='nvim'
 
@@ -30,7 +30,7 @@ alias ytmp3='yt-dlp -x --continue --add-metadata --embed-thumbnail --audio-forma
 alias v='nvim'
 
 # exports
-export PATH="/home/rikka/.local/bin:$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.npm-packages/bin:$HOME/.local/bin:$HOME/.cargo/bin:$PATH"
 
 #bindkey
 bindkey ";5C" forward-word
