@@ -7,14 +7,22 @@ add_newline = true
 success_symbol = "[λ](bold yellow)"
 error_symbol = "[✖](bold red) "
 
-[hostname]
-ssh_only = false
-format = "[$hostname]($style) "
-trim_at = "-"
-style = "bold dimmed green"
-disabled = false
+[directory]
+truncation_length = 4
+style = "italic cyan"
 
-[username]
-style_user = "bold dimmed blue"
-format = "[$user]($style)@"
-show_always = true
+[git_branch]
+style = "italic purple"
+format = "[$branch]($style) "
+
+#[hostname]
+#ssh_only = false
+#format = "[$hostname]($style) "
+#trim_at = "-"
+#style = "bold dimmed green"
+#disabled = false
+
+#[username]
+#style_user = "bold dimmed blue"
+#format = "[$user]($style)@"
+#show_always = true
