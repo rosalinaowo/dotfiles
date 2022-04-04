@@ -38,20 +38,30 @@ packer.init {
   },
 }
 
+-- returns the require for use in `config` parameter of packer's use
+-- expects the name of the config file
+function get_setup(name)
+  return string.format('require("setup/%s")', name)
+end
+
 -- Plugins
 return packer.startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'sheerun/vim-polyglot'
-  use 'kyazdani42/nvim-tree.lua'
-  use 'jiangmiao/auto-pairs'
+  use({ 'kyazdani42/nvim-tree.lua', config = get_setup('nvim-tree') })
+  use({ 'windwp/nvim-autopairs', config = get_setup('autopairs') })
   use 'tpope/vim-fugitive'
   use 'tpope/vim-rhubarb'
-  use 'cohama/lexima.vim'
-  use 'nvim-lualine/lualine.nvim'
   use 'kyazdani42/nvim-web-devicons'
-  use 'romgrk/barbar.nvim'
+  use({
+    'nvim-lualine/lualine.nvim',
+    config = get_setup('lualine-config'),
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true },
+    })
+  use({ 'romgrk/barbar.nvim', config = get_setup('barbar') })
   use 'ryanoasis/vim-devicons'
   use 'morhetz/gruvbox'
+  use({ "goolord/alpha-nvim", config = get_setup("alpha") })
 
   -- Cmp plugins
   use 'hrsh7th/nvim-cmp'

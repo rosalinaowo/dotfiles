@@ -4,7 +4,6 @@ local opts = { noremap = true, silent = true }
 vim.g.mapleader = ' '
 
 -- Dvorak-friendly keybinds
---nvo
 map('n', 'd', 'h', opts)
 map('n', 'h', 'j', opts)
 map('n', 't', 'k', opts)
@@ -15,14 +14,9 @@ map('n', 'j', 'd', opts)
 map('n', 'l', 'n', opts)
 map('n', 'L', 'N', opts)
 
--- NerdTree
-map('n', '<C-f>', ':NERDTreeFocus<CR>', opts)
-map('n', '<C-n>', ':NerdTree<CR>', opts)
-map('n', '<C-t>', ':NERDTreeToggle<CR>', opts)
-
 -- Nvim-tree.lua
 map('n', '<leader>e', ':NvimTreeToggle<CR>', opts)
-map('n', '<leader>r', ':NvimTreeRefresh<CR>', opts)
+map('n', '<leader>f', ':NvimTreeFindFile<CR>', opts)
 
 -- Split Size
 
@@ -30,6 +24,15 @@ map('n', '<C-Left>', ':vertical resize +3<CR>', opts)
 map('n', '<C-Right>', ':vertical resize -3<CR>', opts)
 map('n', '<C-Up>', ':resize +3<CR>', opts)
 map('n', '<C-Down', ':resize -3<CR>', opts)
+
+-- Update plugins
+map('n', '<leader>u', ':PackerSync<CR>', opts)
+
+-- Open config
+map('n', '<leader>c', '<cmd>e $HOME/.config/nvim/init.lua<CR>', opts)
+
+-- New file
+map('n', '<leader>n', '<cmd>enew<CR>', opts)
 
 -- barbar mappings
 -- Move to previous/next
