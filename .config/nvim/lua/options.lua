@@ -34,4 +34,5 @@ vim.cmd([[
 	highlight CursorLineNr cterm=none ctermfg=White guifg=#2b506e guibg=#000000
 	let g:gruvbox_italic=1
 	colorscheme gruvbox
+	autocmd BufWritePost *note*.md silent !buildNote %:p
 ]])

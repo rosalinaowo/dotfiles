@@ -11,7 +11,7 @@ export BROWSER='firefox'
 export EDITOR='nvim'
 
 #aliases
-alias reload='source .zshrc' 
+alias reload='source ~/.zshrc' 
 alias la='exa -la --color=always --group-directories-first --icons'
 alias ls='exa -a --color=always --group-directories-first --icons'
 alias l='exa --color=always --group-directories-first --icons'

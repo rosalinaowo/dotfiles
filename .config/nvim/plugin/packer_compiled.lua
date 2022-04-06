@@ -69,6 +69,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  LuaSnip = {
+    loaded = true,
+    path = "/home/rikka/.local/share/nvim/site/pack/packer/start/LuaSnip",
+    url = "https://github.com/L3MON4D3/LuaSnip"
+  },
   ["alpha-nvim"] = {
     config = { 'require("setup/alpha")' },
     loaded = true,
@@ -81,15 +86,55 @@ _G.packer_plugins = {
     path = "/home/rikka/.local/share/nvim/site/pack/packer/start/barbar.nvim",
     url = "https://github.com/romgrk/barbar.nvim"
   },
+  ["bufdelete.nvim"] = {
+    loaded = true,
+    path = "/home/rikka/.local/share/nvim/site/pack/packer/start/bufdelete.nvim",
+    url = "https://github.com/famiu/bufdelete.nvim"
+  },
+  ["cmp-buffer"] = {
+    loaded = true,
+    path = "/home/rikka/.local/share/nvim/site/pack/packer/start/cmp-buffer",
+    url = "https://github.com/hrsh7th/cmp-buffer"
+  },
+  ["cmp-cmdline"] = {
+    loaded = true,
+    path = "/home/rikka/.local/share/nvim/site/pack/packer/start/cmp-cmdline",
+    url = "https://github.com/hrsh7th/cmp-cmdline"
+  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/home/rikka/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
+  ["cmp-nvim-lua"] = {
+    loaded = true,
+    path = "/home/rikka/.local/share/nvim/site/pack/packer/start/cmp-nvim-lua",
+    url = "https://github.com/hrsh7th/cmp-nvim-lua"
+  },
+  ["cmp-path"] = {
+    loaded = true,
+    path = "/home/rikka/.local/share/nvim/site/pack/packer/start/cmp-path",
+    url = "https://github.com/hrsh7th/cmp-path"
+  },
+  cmp_luasnip = {
+    loaded = true,
+    path = "/home/rikka/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
+    url = "https://github.com/saadparwaiz1/cmp_luasnip"
+  },
+  ["friendly-snippets"] = {
+    loaded = true,
+    path = "/home/rikka/.local/share/nvim/site/pack/packer/start/friendly-snippets",
+    url = "https://github.com/rafamadriz/friendly-snippets"
+  },
   gruvbox = {
     loaded = true,
     path = "/home/rikka/.local/share/nvim/site/pack/packer/start/gruvbox",
     url = "https://github.com/morhetz/gruvbox"
+  },
+  ["lspkind-nvim"] = {
+    loaded = true,
+    path = "/home/rikka/.local/share/nvim/site/pack/packer/start/lspkind-nvim",
+    url = "https://github.com/onsails/lspkind-nvim"
   },
   ["lualine.nvim"] = {
     config = { 'require("setup/lualine-config")' },
@@ -104,6 +149,7 @@ _G.packer_plugins = {
     url = "https://github.com/windwp/nvim-autopairs"
   },
   ["nvim-cmp"] = {
+    config = { 'require("setup/cmp")' },
     loaded = true,
     path = "/home/rikka/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
@@ -147,6 +193,18 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: nvim-autopairs
+time([[Config for nvim-autopairs]], true)
+require("setup/autopairs")
+time([[Config for nvim-autopairs]], false)
+-- Config for: barbar.nvim
+time([[Config for barbar.nvim]], true)
+require("setup/barbar")
+time([[Config for barbar.nvim]], false)
+-- Config for: nvim-cmp
+time([[Config for nvim-cmp]], true)
+require("setup/cmp")
+time([[Config for nvim-cmp]], false)
 -- Config for: lualine.nvim
 time([[Config for lualine.nvim]], true)
 require("setup/lualine-config")
@@ -155,18 +213,10 @@ time([[Config for lualine.nvim]], false)
 time([[Config for nvim-tree.lua]], true)
 require("setup/nvim-tree")
 time([[Config for nvim-tree.lua]], false)
--- Config for: nvim-autopairs
-time([[Config for nvim-autopairs]], true)
-require("setup/autopairs")
-time([[Config for nvim-autopairs]], false)
 -- Config for: alpha-nvim
 time([[Config for alpha-nvim]], true)
 require("setup/alpha")
 time([[Config for alpha-nvim]], false)
--- Config for: barbar.nvim
-time([[Config for barbar.nvim]], true)
-require("setup/barbar")
-time([[Config for barbar.nvim]], false)
 if should_profile then save_profiles() end
 
 end)

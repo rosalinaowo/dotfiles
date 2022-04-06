@@ -62,10 +62,25 @@ return packer.startup(function(use)
   use 'ryanoasis/vim-devicons'
   use 'morhetz/gruvbox'
   use({ "goolord/alpha-nvim", config = get_setup("alpha") })
+  use({ "onsails/lspkind-nvim", requires = { { "famiu/bufdelete.nvim" } } })
 
   -- Cmp plugins
-  use 'hrsh7th/nvim-cmp'
-  use 'hrsh7th/cmp-nvim-lsp'
+  use({
+    'hrsh7th/nvim-cmp',
+  requires ={
+      { 'hrsh7th/cmp-nvim-lsp' },
+      { 'hrsh7th/cmp-nvim-lua' },
+      { 'hrsh7th/cmp-buffer' },
+      { 'hrsh7th/cmp-path' },
+      { 'hrsh7th/cmp-cmdline' },
+      { 'saadparwaiz1/cmp_luasnip' },
+    },
+    config = get_setup('cmp'),
+  })
+
+  -- Snippets
+  use 'L3MON4D3/LuaSnip'
+  use 'rafamadriz/friendly-snippets'
 
   -- LSP
   --  use 'neovim/nvim-lspconfig'
