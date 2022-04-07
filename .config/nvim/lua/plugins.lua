@@ -53,16 +53,30 @@ return packer.startup(function(use)
   use 'tpope/vim-fugitive'
   use 'tpope/vim-rhubarb'
   use 'kyazdani42/nvim-web-devicons'
+  
+  -- Statusline
   use({
     'nvim-lualine/lualine.nvim',
     config = get_setup('lualine-config'),
     requires = { 'kyazdani42/nvim-web-devicons', opt = true },
     })
+
+  -- Statusbar
   use({ 'romgrk/barbar.nvim', config = get_setup('barbar') })
+  
   use 'ryanoasis/vim-devicons'
   use 'morhetz/gruvbox'
+
+  -- Starup Screen
   use({ "goolord/alpha-nvim", config = get_setup("alpha") })
+  
   use({ "onsails/lspkind-nvim", requires = { { "famiu/bufdelete.nvim" } } })
+  
+  -- Better highlighting for lua
+  use({
+      'tbastos/vim-lua',
+      ft = 'lua',
+    })
 
   -- Cmp plugins
   use({
