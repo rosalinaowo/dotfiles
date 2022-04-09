@@ -1,7 +1,7 @@
 # dotfiles
 My personal dotfiles.
 
-### Thing i use
+### Things i use
 
 |	Arch						|	Btw						|
 |-----------------|---------------|
