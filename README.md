@@ -3,7 +3,7 @@ My personal dotfiles.
 
 ### Thing i use
 
-|	OS							|	Arch					|
+|	Arch						|	Btw						|
 |-----------------|---------------|
 |	Shell						|	Zsh						|
 |	Terminal				|	Wezterm/Kitty	|
