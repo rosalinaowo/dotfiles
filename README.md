@@ -3,9 +3,8 @@ My personal dotfiles.
 
 ### Thing i use
 
-
-|-----------------|---------------|
 |	OS							|	Arch					|
+|-----------------|---------------|
 |	Shell						|	Zsh						|
 |	Terminal				|	Wezterm/Kitty	|
 |	Text Editor			|	Neovim				|
