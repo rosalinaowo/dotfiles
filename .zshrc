@@ -18,10 +18,8 @@ alias l='exa --color=always --group-directories-first --icons'
 alias ..='cd ..'
 alias update='sudo pacman -Syu'
 alias dsmotion='ds4drv --hidraw --udp'
-alias pipes='pipes.sh'
 alias cbonsai='cbonsai -S'
 alias clock='tty-clock -c -C 6'
-alias getpath="find -type f | fzf | sed 's/^..//' | tr -d '\n' | xclip -selection c" 
 alias bn='$HOME/scripts/bunnyfetch'
 alias open='xdg-open'
 alias reca='ffmpeg -f pulse -i default -y -v error -stats '
@@ -33,8 +31,8 @@ alias v='nvim'
 export PATH="$HOME/.npm-packages/bin:$HOME/.local/bin:$HOME/.cargo/bin:$PATH"
 
 #bindkey
-bindkey ";5C" forward-word
-bindkey ";5D" backward-word
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
 
 # history
 HISTFILE=~/.histfile
