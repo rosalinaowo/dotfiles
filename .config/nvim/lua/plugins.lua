@@ -45,41 +45,49 @@ function get_setup(name)
 end
 
 -- Plugins
-return packer.startup(function(use)
-  use 'wbthomason/packer.nvim'
-  use 'sheerun/vim-polyglot'
-  use({ 'kyazdani42/nvim-tree.lua', config = get_setup('nvim-tree') })
-  use({ 'windwp/nvim-autopairs', config = get_setup('autopairs') })
-  use 'tpope/vim-fugitive'
-  use 'tpope/vim-rhubarb'
-  use 'kyazdani42/nvim-web-devicons'
+local plugins = {
+  -- Core
+  { 'wbthomason/packer.nvim' },
+  { 'lewis6991/impatient.nvim' },
   
+  -- Utils
+  { 'sheerun/vim-polyglot' },
+  { 'kyazdani42/nvim-tree.lua', config = get_setup('nvim-tree') },
+  { 'windwp/nvim-autopairs', config = get_setup('autopairs') },
+
+  -- Ui
+  { 'kyazdani42/nvim-web-devicons'},
+  { 'ryanoasis/vim-devicons' },
+  { 
+    'VonHeikemen/searchbox.nvim',
+    requires = { 'MunifTanjim/nui.nvim' },
+  },
+
   -- Statusline
-  use({
+  {
     'nvim-lualine/lualine.nvim',
     config = get_setup('lualine-config'),
     requires = { 'kyazdani42/nvim-web-devicons', opt = true },
-    })
+    },
 
   -- Statusbar
-  use({ 'romgrk/barbar.nvim', config = get_setup('barbar') })
+  { 'romgrk/barbar.nvim', config = get_setup('barbar') },
   
-  use 'ryanoasis/vim-devicons'
-  use 'morhetz/gruvbox'
+  { 'morhetz/gruvbox' },
 
   -- Starup Screen
-  use({ "goolord/alpha-nvim", config = get_setup("alpha") })
+  { "goolord/alpha-nvim", config = get_setup("alpha") },
   
-  use({ "onsails/lspkind-nvim", requires = { { "famiu/bufdelete.nvim" } } })
+  { "onsails/lspkind-nvim", requires = { "famiu/bufdelete.nvim" } },
   
   -- Better highlighting for lua
-  use({
+  {
       'tbastos/vim-lua',
       ft = 'lua',
-    })
+    },
 
   -- Cmp plugins
-  use({
+  {
     'hrsh7th/nvim-cmp',
   requires ={
       { 'hrsh7th/cmp-nvim-lsp' },
@@ -90,14 +98,22 @@ return packer.startup(function(use)
       { 'saadparwaiz1/cmp_luasnip' },
     },
     config = get_setup('cmp'),
-  })
+  },
 
   -- Snippets
-  use 'L3MON4D3/LuaSnip'
-  use 'rafamadriz/friendly-snippets'
+  { 'L3MON4D3/LuaSnip' },
+  { 'rafamadriz/friendly-snippets' },
 
   -- LSP
-  --  use 'neovim/nvim-lspconfig'
+  --  { 'neovim/nvim-lspconfig' },
+}
+
+-- Load Plugins
+return packer.startup(function(use)
+  for _, v in pairs(plugins) do
+    use(v)
+  end
+  
 
   -- Automatically set up your configuration after cloning packer.nvim
   if PACKER_BOOTSTRAP then

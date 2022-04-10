@@ -14,6 +14,10 @@ map('n', 'j', 'd', opts)
 map('n', 'l', 'n', opts)
 map('n', 'L', 'N', opts)
 
+-- Searchbox
+map('n', '<leader>s', ':SearchBoxMatchAll<CR>', opts)
+map('n', '<leader>r', ':SearchBoxReplace<CR>', opts)
+
 -- Nvim-tree.lua
 map('n', '<leader>e', ':NvimTreeToggle<CR>', opts)
 map('n', '<leader>f', ':NvimTreeFindFile<CR>', opts)

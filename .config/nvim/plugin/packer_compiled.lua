@@ -131,6 +131,11 @@ _G.packer_plugins = {
     path = "/home/rikka/.local/share/nvim/site/pack/packer/start/gruvbox",
     url = "https://github.com/morhetz/gruvbox"
   },
+  ["impatient.nvim"] = {
+    loaded = true,
+    path = "/home/rikka/.local/share/nvim/site/pack/packer/start/impatient.nvim",
+    url = "https://github.com/lewis6991/impatient.nvim"
+  },
   ["lspkind-nvim"] = {
     loaded = true,
     path = "/home/rikka/.local/share/nvim/site/pack/packer/start/lspkind-nvim",
@@ -141,6 +146,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/rikka/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
+  ["nui.nvim"] = {
+    loaded = true,
+    path = "/home/rikka/.local/share/nvim/site/pack/packer/start/nui.nvim",
+    url = "https://github.com/MunifTanjim/nui.nvim"
   },
   ["nvim-autopairs"] = {
     config = { 'require("setup/autopairs")' },
@@ -170,15 +180,15 @@ _G.packer_plugins = {
     path = "/home/rikka/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
+  ["searchbox.nvim"] = {
+    loaded = true,
+    path = "/home/rikka/.local/share/nvim/site/pack/packer/start/searchbox.nvim",
+    url = "https://github.com/VonHeikemen/searchbox.nvim"
+  },
   ["vim-devicons"] = {
     loaded = true,
     path = "/home/rikka/.local/share/nvim/site/pack/packer/start/vim-devicons",
     url = "https://github.com/ryanoasis/vim-devicons"
-  },
-  ["vim-fugitive"] = {
-    loaded = true,
-    path = "/home/rikka/.local/share/nvim/site/pack/packer/start/vim-fugitive",
-    url = "https://github.com/tpope/vim-fugitive"
   },
   ["vim-lua"] = {
     loaded = false,
@@ -191,15 +201,14 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/rikka/.local/share/nvim/site/pack/packer/start/vim-polyglot",
     url = "https://github.com/sheerun/vim-polyglot"
-  },
-  ["vim-rhubarb"] = {
-    loaded = true,
-    path = "/home/rikka/.local/share/nvim/site/pack/packer/start/vim-rhubarb",
-    url = "https://github.com/tpope/vim-rhubarb"
   }
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: nvim-cmp
+time([[Config for nvim-cmp]], true)
+require("setup/cmp")
+time([[Config for nvim-cmp]], false)
 -- Config for: lualine.nvim
 time([[Config for lualine.nvim]], true)
 require("setup/lualine-config")
@@ -208,6 +217,10 @@ time([[Config for lualine.nvim]], false)
 time([[Config for alpha-nvim]], true)
 require("setup/alpha")
 time([[Config for alpha-nvim]], false)
+-- Config for: nvim-tree.lua
+time([[Config for nvim-tree.lua]], true)
+require("setup/nvim-tree")
+time([[Config for nvim-tree.lua]], false)
 -- Config for: nvim-autopairs
 time([[Config for nvim-autopairs]], true)
 require("setup/autopairs")
@@ -216,14 +229,6 @@ time([[Config for nvim-autopairs]], false)
 time([[Config for barbar.nvim]], true)
 require("setup/barbar")
 time([[Config for barbar.nvim]], false)
--- Config for: nvim-cmp
-time([[Config for nvim-cmp]], true)
-require("setup/cmp")
-time([[Config for nvim-cmp]], false)
--- Config for: nvim-tree.lua
-time([[Config for nvim-tree.lua]], true)
-require("setup/nvim-tree")
-time([[Config for nvim-tree.lua]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
