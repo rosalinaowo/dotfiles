@@ -1,3 +1,4 @@
+# Reference https://github.com/ncmpcpp/ncmpcpp/blob/master/doc/config
 ncmpcpp_directory  = "~/.config/ncmpcpp/"
 lyrics_directory = "~/.config/ncmpcpp/"
 
@@ -35,7 +36,7 @@ mouse_support = "yes"
 header_visibility = "no"
 statusbar_visibility = "no"
 
-alternative_header_first_line_format = $6$b» {%t} «$/b
+alternative_header_first_line_format = $6$b» {%t}|{%f} «$/b
 alternative_header_second_line_format = $4{%b}|{/%D/}
 
 statusbar_color = "white"
@@ -53,7 +54,7 @@ color1 = "white"
 color2 = "blue"
 
 #song_list_format = " %t $R%a"
-song_list_format = "$6 {%a} »$4 %t $/r"
+song_list_format = "$6 {%a} »$4 {%t}|{%f} $/r"
 song_status_format = "$b$7♫ $2%a $4⟫$3⟫ $8%t $4⟫$3⟫ $5%b "
 
 execute_on_song_change = "~/.config/ncmpcpp/notif"
