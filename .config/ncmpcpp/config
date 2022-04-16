@@ -54,7 +54,7 @@ color1 = "white"
 color2 = "blue"
 
 #song_list_format = " %t $R%a"
-song_list_format = "$6 {%a} »$4 {%t}|{%f} $/r"
+song_list_format = "$6 {%a »}$4 {%t}|{%f} $/r"
 song_status_format = "$b$7♫ $2%a $4⟫$3⟫ $8%t $4⟫$3⟫ $5%b "
 
 execute_on_song_change = "~/.config/ncmpcpp/notif"
