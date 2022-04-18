@@ -1,13 +1,22 @@
 # dotfiles
 My personal dotfiles.
 
+Required Fonts:
+- Fira Code
+- FiraCode Nerd Font
+- JetBrainsMono Nerd Font
+- Operator Mono (in `.fonts` folder)
+- Font Awesome
+- Noto CJK
+- Noto Color Emoji
+
 <hr>
 
 ## Things i use
 
 - OS: [arch](https://archlinux.org/)
 - Shell: [zsh](https://zsh.sourceforge.io/)
-- Terminal: [wezterm](https://wezfurlong.org/wezterm/)/[kitty](https://sw.kovidgoyal.net/kitty/)
+- Terminal: [kitty](https://sw.kovidgoyal.net/kitty/)/[tym](https://github.com/endaaman/tym) (for cpu render)
 - Text Editor: [neovim](https://neovim.io/)
 - WM: [my build](https://github.com/krashy-i386/dwm/) of [dwm](https://dwm.suckless.org/)
 - Music Player: [ncmpcpp](https://github.com/ncmpcpp/ncmpcpp/)

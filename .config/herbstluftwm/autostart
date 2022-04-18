@@ -23,13 +23,13 @@ Mod=Mod4   # Use the super key as the main modifier
 Alt=Mod1   # Use alt as another modifier
 
 # terminals
-TERMINAL=wezterm
+TERMINAL=kitty
 hc keybind $Mod-Return spawn $TERMINAL
 
 # applications
 TEXT_EDITOR=nvim
 WEB_BROWSER=firefox
-hc keybind $Mod-Shift-e spawn "$TERMINAL" "start" "$TEXT_EDITOR"
+hc keybind $Mod-Shift-e spawn "$TERMINAL" "-e" "$TEXT_EDITOR"
 hc keybind $Mod-Shift-w spawn $WEB_BROWSER
 
 # rofi and dmenu (only if rofi breaks)
@@ -166,7 +166,7 @@ hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK|DESKTOP)' manage=off
 hc rule class~'(obs)' focus=on floating=on
 hc rule class~'(Lxappearance|Nitrogen)' focus=on floating=on
 hc rule class~'(Pavucontrol|Xfce4-power-manager-settings)' focus=on floating=on
-hc rule class~'(feh|sxiv|Gimp)' focus=on floating=on
+hc rule class~'(feh|Sxiv|Gimp*)' focus=on floating=on
 
 hc set tree_style '╾│ ├└╼─┐'
 
