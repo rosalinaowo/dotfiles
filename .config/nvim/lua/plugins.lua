@@ -62,6 +62,7 @@ local plugins = {
     'VonHeikemen/searchbox.nvim',
     requires = { 'MunifTanjim/nui.nvim' },
   },
+  { 'lukas-reineke/indent-blankline.nvim', config = get_setup('indent-blankline') },
 
   -- Statusline
   {
