@@ -38,6 +38,9 @@ map('n', '<leader>c', '<cmd>e $HOME/.config/nvim/init.lua<CR>', opts)
 -- New file
 map('n', '<leader>n', '<cmd>enew<CR>', opts)
 
+-- Colorizer
+map('n', '<leader>C', ':ColorizerToggle<CR>', opts)
+
 -- barbar mappings
 -- Move to previous/next
 map('n', '<A-,>', ':BufferPrevious<CR>', opts)

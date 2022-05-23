@@ -6,7 +6,7 @@ eval "$(starship init zsh)"
 #PS1="%F{green}%B%~/%b%f "
 
 #default apps
-export TERMINAL='wezterm'
+export TERMINAL='kitty'
 export BROWSER='firefox'
 export EDITOR='nvim'
 
@@ -24,7 +24,7 @@ alias bn='$HOME/scripts/bunnyfetch'
 alias open='xdg-open'
 alias reca='ffmpeg -f pulse -i default -y -v error -stats '
 alias tree='exa --tree --icons'
-alias ytmp3='yt-dlp -x --continue --add-metadata --embed-thumbnail --audio-format mp3 --audio-quality 0 --metadata-from-title="%(artist)s - %(title)s" --prefer-ffmpeg -o "%(title)s.%(ext)s"'
+alias ytmp3='yt-dlp -x --continue --add-metadata --audio-format mp3 --audio-quality 0 --metadata-from-title="%(artist)s - %(title)s" --prefer-ffmpeg -o "%(title)s.%(ext)s"'
 alias v='nvim'
 
 # exports

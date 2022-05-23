@@ -54,6 +54,7 @@ local plugins = {
   { 'sheerun/vim-polyglot' },
   { 'kyazdani42/nvim-tree.lua', config = get_setup('nvim-tree') },
   { 'windwp/nvim-autopairs', config = get_setup('autopairs') },
+  { 'norcalli/nvim-colorizer.lua', config = get_setup('nvim-colorizer') },
 
   -- Ui
   { 'kyazdani42/nvim-web-devicons'},
