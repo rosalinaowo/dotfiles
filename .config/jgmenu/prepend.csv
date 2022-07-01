@@ -1,0 +1,16 @@
+Terminal,kitty,/home/rikka/.config/jgmenu/MenuIcons/terminal.png
+File Manager,pcmanfm,/home/rikka/.config/jgmenu/MenuIcons/file-manager.png
+Web Browser,firefox,/home/rikka/.config/jgmenu/MenuIcons/web-browser.png
+Text Editor,lite-xl,/home/rikka/.config/jgmenu/MenuIcons/text-editor.png
+^sep()
+Applications,^checkout(lx-apps),/home/rikka/.config/jgmenu/MenuIcons/applications.png
+Apps as Root,^checkout(root-apps),/home/rikka/.config/jgmenu/MenuIcons/root-apps.png
+Screenshot,flameshot gui,/home/rikka/.config/jgmenu/MenuIcons/screenshot.png
+Lock,$HOME/scripts/lock.sh,/home/rikka/.config/jgmenu/MenuIcons/lock.png
+
+^tag(root-apps)
+Terminal (Root),gksu kitty,/home/rikka/.config/jgmenu/MenuIcons/terminal.png
+File Manager (Root),gksu pcmanfm,/home/rikka/.config/jgmenu/MenuIcons/file-manager.png
+Neovim (Root), fakeroot nvim /,/home/rikka/.config/jgmenu/MenuIcons/text-editor.png
+
+^tag(lx-apps)

@@ -26,6 +26,8 @@ alias reca='ffmpeg -f pulse -i default -y -v error -stats '
 alias tree='exa --tree --icons'
 alias ytmp3='yt-dlp -x --continue --add-metadata --audio-format mp3 --audio-quality 0 --metadata-from-title="%(artist)s - %(title)s" --prefer-ffmpeg -o "%(title)s.%(ext)s"'
 alias v='nvim'
+alias syncr='rsync -rtvzP'
+alias uploadr='rsync -rtvzP --chown=www-data'
 
 # exports
 export PATH="$HOME/.npm-packages/bin:$HOME/.local/bin:$HOME/.cargo/bin:$PATH"

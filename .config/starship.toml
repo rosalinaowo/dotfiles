@@ -14,15 +14,3 @@ style = "italic cyan"
 [git_branch]
 style = "italic purple"
 format = "[$branch]($style) "
-
-#[hostname]
-#ssh_only = false
-#format = "[$hostname]($style) "
-#trim_at = "-"
-#style = "bold dimmed green"
-#disabled = false
-
-#[username]
-#style_user = "bold dimmed blue"
-#format = "[$user]($style)@"
-#show_always = true

@@ -48,21 +48,18 @@ end
 local plugins = {
   -- Core
   { 'wbthomason/packer.nvim' },
-  { 'lewis6991/impatient.nvim' },
   
   -- Utils
+  { 'nathom/filetype.nvim' },
   { 'sheerun/vim-polyglot' },
   { 'kyazdani42/nvim-tree.lua', config = get_setup('nvim-tree') },
   { 'windwp/nvim-autopairs', config = get_setup('autopairs') },
   { 'norcalli/nvim-colorizer.lua', config = get_setup('nvim-colorizer') },
+  { 'norcalli/nvim-base16.lua' },
 
   -- Ui
   { 'kyazdani42/nvim-web-devicons'},
   { 'ryanoasis/vim-devicons' },
-  { 
-    'VonHeikemen/searchbox.nvim',
-    requires = { 'MunifTanjim/nui.nvim' },
-  },
   { 'lukas-reineke/indent-blankline.nvim', config = get_setup('indent-blankline') },
 
   -- Statusline
@@ -74,40 +71,22 @@ local plugins = {
 
   -- Statusbar
   { 'romgrk/barbar.nvim', config = get_setup('barbar') },
-  
-  { 'morhetz/gruvbox' },
-
-  -- Starup Screen
-  { "goolord/alpha-nvim", config = get_setup("alpha") },
-  
-  { "onsails/lspkind-nvim", requires = { "famiu/bufdelete.nvim" } },
-  
-  -- Better highlighting for lua
-  {
-      'tbastos/vim-lua',
-      ft = 'lua',
-    },
 
   -- Cmp plugins
   {
     'hrsh7th/nvim-cmp',
   requires ={
+      { 'neovim/nvim-lspconfig' },
       { 'hrsh7th/cmp-nvim-lsp' },
       { 'hrsh7th/cmp-nvim-lua' },
       { 'hrsh7th/cmp-buffer' },
       { 'hrsh7th/cmp-path' },
       { 'hrsh7th/cmp-cmdline' },
+      { 'L3MON4D3/LuaSnip' },
       { 'saadparwaiz1/cmp_luasnip' },
     },
     config = get_setup('cmp'),
   },
-
-  -- Snippets
-  { 'L3MON4D3/LuaSnip' },
-  { 'rafamadriz/friendly-snippets' },
-
-  -- LSP
-  --  { 'neovim/nvim-lspconfig' },
 }
 
 -- Load Plugins

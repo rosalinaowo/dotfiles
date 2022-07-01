@@ -1,2 +1,3 @@
 # Exclude mpd pid
 .config/mpd/pid
+.config/nvim/plugin
