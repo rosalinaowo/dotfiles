@@ -18,7 +18,7 @@ Required Fonts:
 - Shell: [zsh](https://zsh.sourceforge.io/)
 - Terminal: [kitty](https://sw.kovidgoyal.net/kitty/)/[tym](https://github.com/endaaman/tym) (for cpu render)
 - Text Editor: [neovim](https://neovim.io/)
-- WM: [herbstluftwm](https://herbstluftwm.org/)
+- WM: [dwm](https://dwm.suckless.org/)
 - Music Player: [ncmpcpp](https://github.com/ncmpcpp/ncmpcpp/)
 - App Launcher: [rofi](https://github.com/davatorium/rofi/)
 - Notifications: [dunst](https://github.com/dunst-project/dunst/)
