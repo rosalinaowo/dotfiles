@@ -18,65 +18,17 @@
 
 [colors]
 background = #000
-foreground = #ddb2c6
+foreground = #97a1a6
+;foreground = #ddb2c6
 
 [bar/left]
 ;monitor = ${env:MONITOR:DP-0}
-width = 25.0%
-height = 40
-offset-x = 1%
-offset-y = 1.1%
-radius = 15.0 
-fixed-center = true
-
-background = ${colors.background}
-foreground = ${colors.foreground}
-
-line-size = 2
-line-color = #00564d
-
-border-size = 0
-border-color = ${xrdb:color6:#222}
-
-padding-left = 1
-padding-right = 2
-
-module-margin-left = 2 
-module-margin-right = 2
-
-font-0 = "Terminus:style=Bold:pixelsize=13;3"
-
-modules-left = 
-modules-center = ewmh alsa
-modules-right = 
-
-separator = 
-tray-position = none
-tray-padding = 2
-;tray-background = #0063ff
-
-;wm-restack = bspwm
-wm-restack = i3
-
-override-redirect = false
-
-;scroll-up = bspwm-desknext
-;scroll-down = bspwm-deskprev
-
-;scroll-up = i3wm-wsnext
-;scroll-down = i3wm-wsprev
-
-cursor-click = pointer
-cursor-scroll = ns-resize
-
-[bar/right]
-;monitor = ${env:MONITOR:DP-0}
-width = 20%
-height = 40
-offset-x = 74%
-offset-y = 2%
-radius = 15.0 
-fixed-center = true
+width = 130
+height = 20
+offset-x = 10
+offset-y = 4
+radius = 0
+fixed-center = false
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -88,12 +40,50 @@ border-size = 0
 border-color = ${xrdb:color6:#222}
 
 padding-left = 0
-padding-right = 2
+padding-right = 0
 
 module-margin-left = 1
 module-margin-right = 1
 
-font-0 = "Terminus:style=Bold:pixelsize=13;3"
+font-0 = "Terminus:style=Bold:size=20;3"
+
+modules-left = 
+modules-center = app
+modules-right =  
+
+separator = 
+tray-position = none
+tray-padding = 2
+;tray-background = #0063ff
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+[bar/center]
+;monitor = ${env:MONITOR:DP-0}
+width = 110
+height = 20
+offset-x = 905
+offset-y = 4
+radius = 0
+fixed-center = false
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 2
+line-color = #00564d
+
+border-size = 0
+border-color = ${xrdb:color6:#222}
+
+padding-left = 0
+padding-right = 0
+
+module-margin-left = 1
+module-margin-right = 1
+
+font-0 = "Terminus:style=Bold:size=20;3"
 
 modules-left = 
 modules-center = date
@@ -104,16 +94,43 @@ tray-position = none
 tray-padding = 2
 ;tray-background = #0063ff
 
-;wm-restack = bspwm
-;wm-restack = i3
+cursor-click = pointer
+cursor-scroll = ns-resize
 
-override-redirect = false
+[bar/right]
+;monitor = ${env:MONITOR:DP-0}
+width = 85
+height = 20
+offset-x = 1825
+offset-y = 4
+radius = 0
+fixed-center = false
 
-;scroll-up = bspwm-desknext
-;scroll-down = bspwm-deskprev
+background = ${colors.background}
+foreground = ${colors.foreground}
 
-;scroll-up = i3wm-wsnext
-;scroll-down = i3wm-wsprev
+line-size = 2
+line-color = #00564d
+
+border-size = 0
+border-color = ${xrdb:color6:#222}
+
+padding-left = 0
+padding-right = 0
+
+module-margin-left = 1
+module-margin-right = 1
+
+font-0 = "Terminus:style=Bold:size=20;3"
+
+modules-left = 
+modules-center = time
+modules-right =  
+
+separator = 
+tray-position = none
+tray-padding = 2
+;tray-background = #0063ff
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -122,113 +139,12 @@ cursor-scroll = ns-resize
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
-[module/title]
-type = internal/xwindow
+[module/app]
+type = custom/script
 
-; Available tags:
-;   <label> (default)
-format = <label>
-;format-prefix = " "
-;format-prefix-font = 2
-;format-prefix-foreground = ${color.BLUE}
-format-background = ${color.BG}
+exec = ps -e | grep $(xdotool getwindowpid $(xdotool getwindowfocus)) | grep -v grep | awk '{print $4}'
 
-; Available tokens:
-;   %title%
-; Default: %title%
-label = %title%
-label-maxlen = 39
-
-; Used instead of label when there is no window title
-; Available tokens:
-;   None
-label-empty = Desktop
-;label-empty-foreground = ${color.BGA}
-
-;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
-
-[module/herbwm]
-type = internal/xworkspaces
-
-; Only show workspaces defined on the same output as the bar
-;
-; Useful if you want to show monitor specific workspaces
-; on different bars
-;
-; Default: false
-pin-workspaces = true
-
-; Create click handler used to focus desktop
-; Default: true
-enable-click = true
-
-; Create scroll handlers used to cycle desktops
-; Default: true
-enable-scroll = true
-
-; icon-[0-9]+ = <desktop-name>;<icon>
-; NOTE: The desktop name needs to match the name configured by the WM
-; You can get a list of the defined desktops using:
-; $ xprop -root _NET_DESKTOP_NAMES
-icon-0 = 1;
-icon-1 = 2;
-icon-2 = 3;
-icon-3 = 4;
-icon-4 = 5;漣
-icon-default = 
-
-; Available tags:
-;   <label-monitor>
-;   <label-state> - gets replaced with <label-(active|urgent|occupied|empty)>
-; Default: <label-state>
-format = <label-state>
-format-background = ${color.WHITE}
-format-font = 2
-
-; Available tokens:
-;   %name%
-; Default: %name%
-label-monitor = %name%
-
-; Available tokens:
-;   %name%
-;   %icon%
-;   %index%
-; Default: %icon%  %name%
-label-active = ﱣ
-label-active-foreground = ${color.BG}
-;;label-active-underline = ${color.BGA}
-
-; Available tokens:
-;   %name%
-;   %icon%
-;   %index%
-; Default: %icon%  %name%
-label-occupied = 綠
-label-occupied-foreground = ${color.BG}
-;;label-occupied-underline = ${color.BGA}
-
-; Available tokens:
-;   %name%
-;   %icon%
-;   %index%
-; Default: %icon%  %name%
-label-urgent = ﱣ
-label-urgent-foreground = ${color.AC}
-;;label-urgent-underline = ${color.BGA}
-
-; Available tokens:
-;   %name%
-;   %icon%
-;   %index%
-; Default: %icon%  %name%
-label-empty = 祿
-label-empty-foreground = ${color.BG}
-
-label-active-padding = 1
-label-urgent-padding = 1
-label-occupied-padding = 1
-label-empty-padding = 1
+interval = 1
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -254,15 +170,11 @@ content-foreground = ${color.BG}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
-[module/date]
+[module/time]
 type = internal/date
 
 ; Seconds to sleep between updates
 interval = 1.0
-
-; See "http://en.cppreference.com/w/cpp/io/manip/put_time" for details on how to format the date string
-; NOTE: if you want to use syntax tags here you need to use %%{...}
-;;date = %Y-%m-%d%
 
 ; Optional time format
 time = %H:%M
@@ -271,17 +183,17 @@ time = %H:%M
 ; the module will toggle between formats
 ;;date-alt = %A, %d %B %Y
 #time-alt = %d/%m/%Y%
-time-alt = %A %b %d, %G
+;time-alt = %A %b %d, %G
 
 ; Available tags:
 ;   <label> (default)
 
-format = <label>
-format-prefix = " "
-format-prefix-font = 2
+;format = <label>
+;format-prefix = " "
+;format-prefix-font = 2
 ;format-prefix-foreground = ${color.FG}
-format-background = ${color.BGL}
-format-foreground = ${color.WHITE}
+;format-background = ${color.BGL}
+;format-foreground = ${color.WHITE}
 
 ; Available tokens:
 ;   %date%
@@ -291,6 +203,41 @@ label = %time%
 label-font = 0
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/date]
+type = internal/date
+
+; Seconds to sleep between updates
+interval = 1.0
+
+; Optional time format
+time = %a %b %d
+
+; if `date-alt` or `time-alt` is defined, clicking
+; the module will toggle between formats
+;;date-alt = %A, %d %B %Y
+#time-alt = %d/%m/%Y%
+;time-alt = %A %b %d, %G
+
+; Available tags:
+;   <label> (default)
+
+;format = <label>
+;format-prefix = " "
+;format-prefix-font = 2
+;format-prefix-foreground = ${color.FG}
+;format-background = ${color.BGL}
+;format-foreground = ${color.WHITE}
+
+; Available tokens:
+;   %date%
+;   %time%
+; Default: %date%
+label = %time%
+label-font = 0
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
 
 [module/alsa]
 type = internal/alsa

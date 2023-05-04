@@ -27,10 +27,11 @@ vim.opt.splitbelow = true
 vim.opt.splitright = true
 vim.opt.updatetime = 1000
 vim.wo.signcolumn = "yes"
-vim.highlight.create('Comment', {cterm='italic', gui='italic'}, false)
+--vim.highlight.create('Comment', {cterm='italic', gui='italic'}, false)
 
 vim.cmd([[
 	set nocompatible
+	highlight Comment cterm=italic gui=italic
 	highlight CursorLine cterm=NONE ctermbg=236 ctermfg=none guibg=Grey40
 	highlight CursorLineNr cterm=none ctermfg=White guifg=#2b506e guibg=#000000
 	autocmd BufWritePost *note*.md silent !buildNote %:p	

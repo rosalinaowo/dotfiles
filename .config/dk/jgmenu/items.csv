@@ -1,0 +1,22 @@
+Browser,firefox
+Virt-Manager,virt-manager,
+OBS,obs
+Favorites,^checkout(favorites)
+^sep()
+File Manager,pcmanfm
+Termimal,kitty
+Text Editor,kitty nvim
+^sep()
+Lock,$HOME/scripts/lock.sh
+Exit,^checkout(exit)
+
+^tag(favorites)
+Discord,discord
+KeePassXC,keepassxc
+GIMP,gimp
+Tor Browser,torbrowser-launcher
+
+^tag(exit)
+Log Out,loginctl terminate-session ${XDG_SESSION_ID-}
+Reboot,systemctl -i reboot
+Shut Down,systemctl -i poweroff

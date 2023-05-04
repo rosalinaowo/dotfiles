@@ -1,0 +1,13 @@
+feh
+xfce4-power-manager
+dunst
+unclutter
+kitty
+firefox
+flameshot
+pamixer
+playerctl
+rofi
+dmenu
+polybar
+jgmenu

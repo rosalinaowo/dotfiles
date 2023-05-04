@@ -25,6 +25,9 @@ alias v='nvim'
 alias syncr='rsync -rtvzP'
 alias uploadr='rsync -rtvzP --chown=www-data'
 alias untar='tar -xvf'
+webmify() {
+	ffmpeg -i $1 -c:v libvpx-vp9 -crf 33 -b:v 0 -c:a libopus -vbr on $3 $2;
+}
 
 # exports
 export PATH="$HOME/.npm-packages/bin:$HOME/.local/bin:$HOME/.cargo/bin:$PATH"

@@ -18,6 +18,9 @@ map('n', 'L', 'N', opts)
 map('n', '<leader>e', ':NvimTreeToggle<CR>', opts)
 map('n', '<leader>f', ':NvimTreeFindFile<CR>', opts)
 
+-- Terminal
+map('n', '<leader>t', ':ToggleTerm size=75 direction=vertical<CR>', opts)
+
 -- Split Size
 map('n', '<C-Left>', ':vertical resize +3<CR>', opts)
 map('n', '<C-Right>', ':vertical resize -3<CR>', opts)

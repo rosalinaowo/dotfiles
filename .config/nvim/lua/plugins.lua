@@ -56,6 +56,7 @@ local plugins = {
   { 'windwp/nvim-autopairs', config = get_setup('autopairs') },
   { 'norcalli/nvim-colorizer.lua', config = get_setup('nvim-colorizer') },
   { 'norcalli/nvim-base16.lua' },
+  {"akinsho/toggleterm.nvim", tag = '*', config = function() require("toggleterm").setup() end},
 
   -- Ui
   { 'kyazdani42/nvim-web-devicons'},
@@ -67,7 +68,7 @@ local plugins = {
     'nvim-lualine/lualine.nvim',
     config = get_setup('lualine-config'),
     requires = { 'kyazdani42/nvim-web-devicons', opt = true },
-    },
+  },
 
   -- Statusbar
   { 'romgrk/barbar.nvim', config = get_setup('barbar') },
