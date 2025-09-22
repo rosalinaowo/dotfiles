@@ -38,3 +38,8 @@ cit() {
 
     gcc "$src" -o "$base" && echo "Compiled to: ./$base"
 }
+
+# If present, load extra config
+if [ -f "$HOME/.bash_extra" ]; then
+    . "$HOME/.bash_extra"
+fi
