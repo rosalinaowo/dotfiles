@@ -61,33 +61,16 @@ local plugins = {
   -- Ui
   { 'kyazdani42/nvim-web-devicons'},
   { 'ryanoasis/vim-devicons' },
-  { 'lukas-reineke/indent-blankline.nvim', config = get_setup('indent-blankline') },
 
   -- Statusline
   {
     'nvim-lualine/lualine.nvim',
-    config = get_setup('lualine-config'),
+    config = get_setup('lualine'),
     requires = { 'kyazdani42/nvim-web-devicons', opt = true },
   },
 
   -- Statusbar
   { 'romgrk/barbar.nvim', config = get_setup('barbar') },
-
-  -- Cmp plugins
-  {
-    'hrsh7th/nvim-cmp',
-  requires ={
-      { 'neovim/nvim-lspconfig' },
-      { 'hrsh7th/cmp-nvim-lsp' },
-      { 'hrsh7th/cmp-nvim-lua' },
-      { 'hrsh7th/cmp-buffer' },
-      { 'hrsh7th/cmp-path' },
-      { 'hrsh7th/cmp-cmdline' },
-      { 'L3MON4D3/LuaSnip' },
-      { 'saadparwaiz1/cmp_luasnip' },
-    },
-    config = get_setup('cmp'),
-  },
 }
 
 -- Load Plugins

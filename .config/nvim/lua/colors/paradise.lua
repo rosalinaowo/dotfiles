@@ -1,24 +1,5 @@
 local base16 = require("base16")
 
-local colors = {
-	"#151515",
-	"#1f1f1f",
-	"#282828",
-	"#404040",
-	"#e8e3e3",
-	"#e8e3e3",
-	"#e8e3e3",
-	"#e8e3e3",
-	"#b66467",
-	"#d9bc8c",
-	"#d9bc8c",
-	"#8c977d",
-	"#8aa6a2",
-	"#8da3b9",
-	"#a988b0",
-	"#e8e3e3",
-}
-
 _G.paradise_dark = base16.theme_from_array({
 	"151515",
 	"1f1f1f",
