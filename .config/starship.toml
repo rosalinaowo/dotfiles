@@ -1,0 +1,23 @@
+add_newline = true
+
+[username]
+format = "[$user]($style) "
+
+[character]
+#➜λΔ✖
+success_symbol = "[\\$](white)"
+error_symbol = "[X](bold red) "
+
+[directory]
+truncation_length = 4
+style = "italic blue"
+format = "in [$path]($style)[$read_only]($read_only_style) "
+
+[git_branch]
+style = "italic purple"
+format = "[$branch]($style) "
+
+[hostname]
+ssh_only = true
+ssh_symbol = "🌐"
+format = "at [$ssh_symbol$hostname]($style) "
