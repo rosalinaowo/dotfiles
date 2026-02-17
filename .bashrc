@@ -21,6 +21,7 @@ else
     PS1='[\u@\h \W]\$ '
 fi
 
+export GPG_TTY=$(tty) # Import GPG Key
 export PATH="$PATH:$HOME/.local/bin"
 export BROWSER='helium-browser'
 export EDITOR='nvim'
