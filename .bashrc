@@ -1,3 +1,28 @@
+# WSL only commands
+if grep -qiE 'Microsoft|WSL' /proc/version; then
+	# ssh-agent
+	export SSH_ASKPASS_REQUIRE=never
+    	_agent_env="$HOME/.ssh/agent.env"
+
+    	if [ -f "$_agent_env" ]; then
+        	source "$_agent_env" > /dev/null
+    	fi
+
+    	ssh-add -l > /dev/null 2>&1
+    	if [ $? -eq 2 ]; then
+        	_agent_out=$(ssh-agent -s)
+        	eval "$_agent_out" > /dev/null
+        	echo "$_agent_out" > "$_agent_env"
+    	fi
+
+    	unset _agent_env _agent_out
+else
+	# ssh-agent
+	if [ -z "$SSH_AUTH_SOCK" ]; then
+		eval $(ssh-agent -s)
+	fi
+fi
+
 # Get OS id
 if [ -f /etc/os-release ]; then
     . /etc/os-release
