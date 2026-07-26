@@ -48,7 +48,7 @@ fi
 
 export GPG_TTY=$(tty) # Import GPG Key
 export PATH="$PATH:$HOME/.local/bin"
-export BROWSER='helium-browser'
+export BROWSER='helium'
 export EDITOR='nvim'
 export VIMRUNTIME='/usr/share/nvim/runtime'
 
