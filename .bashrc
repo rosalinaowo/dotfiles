@@ -39,9 +39,21 @@ if [ -x /home/linuxbrew/.linuxbrew/bin/brew ]; then
     eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi
 
+set_win_title() {
+    printf '\033]0;%s\007' \
+        "${TITLE:-${USER}@${HOSTNAME%%.*}: ${PWD/$HOME/~}}"
+}
+
 # Defaults
 if [ -x "$(command -v starship)" ]; then
     eval "$(starship init bash)"
+    case "$TERM" in
+    xterm*|rxvt*)
+        starship_precmd_user_func="set_win_title"
+        ;;
+    *)
+        ;;
+    esac
 else
     PS1='[\u@\h \W]\$ '
 fi
