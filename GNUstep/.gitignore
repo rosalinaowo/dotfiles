@@ -1,0 +1,17 @@
+# GNUstep application-registration and history data
+/.AppInfo/
+
+# Window Maker generated caches
+/Library/WindowMaker/CachedPixmaps/
+/Library/WindowMaker/.fonts_converted
+
+# Temporary files created while WMState is rewritten
+/Defaults/WMState.*
+
+# Keep the canonical state file: it contains Dock and Clip configuration
+!/Defaults/WMState
+
+# Common editor and backup files
+*~
+*.swp
+*.swo

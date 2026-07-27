@@ -1,0 +1,18 @@
+#!/bin/sh
+export GTK_THEME=Adwaita-dark
+export QT_QPA_PLATFORMTHEME=qt5ct
+
+xset m 20/10 4
+xset b off
+xset s off
+xrdb -merge "$HOME/.Xresources"
+
+lxpolkit &
+dunst &
+picom &
+pasystray &
+
+# laptop stuff
+xfce4-power-manager &
+xfce4-screensaver &
+nm-applet &

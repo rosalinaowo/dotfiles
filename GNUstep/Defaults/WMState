@@ -1,0 +1,238 @@
+{
+  Dock = {
+    AutoRaiseLower = Yes;
+    Applications = (
+      {
+        Forced = No;
+        Name = Logo.WMDock;
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,0";
+        Lock = Yes;
+        Command = "/usr/bin/WPrefs";
+      },
+      {
+        Forced = No;
+        Name = "x-terminal-emulator.XTerm";
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,1";
+        Lock = No;
+        Command = "x-terminal-emulator";
+      },
+      {
+        Forced = No;
+        Name = wmacpi.DockApp;
+        DropCommand = "wmacpi %d";
+        BuggyApplication = No;
+        AutoLaunch = Yes;
+        Position = "0,6";
+        Lock = Yes;
+        PasteCommand = "wmacpi %s";
+        Command = wmacpi;
+      },
+      {
+        Forced = No;
+        Name = wmifinfo.wmifinfo;
+        DropCommand = "wmifinfo %d";
+        BuggyApplication = No;
+        AutoLaunch = Yes;
+        Position = "0,8";
+        Lock = Yes;
+        PasteCommand = "wmifinfo %s";
+        Command = wmifinfo;
+      },
+      {
+        Forced = No;
+        Name = wmitime.wmitime;
+        DropCommand = "wmitime %d";
+        BuggyApplication = No;
+        AutoLaunch = Yes;
+        Position = "0,2";
+        Lock = Yes;
+        PasteCommand = "wmitime %s";
+        Command = wmitime;
+      },
+      {
+        Forced = No;
+        Name = wmmon.wmmon;
+        DropCommand = "wmmon -s %d";
+        BuggyApplication = No;
+        AutoLaunch = Yes;
+        Position = "0,5";
+        Lock = Yes;
+        PasteCommand = "wmmon -s %s";
+        Command = "wmmon -s";
+      },
+      {
+        Forced = No;
+        Name = wmnd.wmnd;
+        DropCommand = "wmnd -i wlp2s0b1 %d";
+        BuggyApplication = No;
+        AutoLaunch = Yes;
+        Position = "0,7";
+        Lock = Yes;
+        PasteCommand = "wmnd -i wlp2s0b1 %s";
+        Command = "wmnd -i wlp2s0b1";
+      },
+      {
+        Forced = No;
+        Name = wmmon.wmmon;
+        DropCommand = "wmmon %d";
+        BuggyApplication = No;
+        AutoLaunch = Yes;
+        Position = "0,4";
+        Lock = Yes;
+        PasteCommand = "wmmon %s";
+        Command = wmmon;
+      },
+      {
+        Forced = No;
+        Name = wmtop.wmtop;
+        DropCommand = "wmtop %d";
+        BuggyApplication = No;
+        AutoLaunch = Yes;
+        Position = "0,3";
+        Lock = Yes;
+        PasteCommand = "wmtop %s";
+        Command = wmtop;
+      }
+    );
+    Lowered = Yes;
+    Position = "1376,0";
+    Applications900 = (
+      {
+        Forced = No;
+        Name = Logo.WMDock;
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,0";
+        Lock = Yes;
+        Command = "/usr/bin/WPrefs";
+      },
+      {
+        Forced = No;
+        Name = "x-terminal-emulator.XTerm";
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,1";
+        Lock = No;
+        Command = "x-terminal-emulator";
+      },
+      {
+        Forced = No;
+        Name = wmacpi.DockApp;
+        DropCommand = "wmacpi %d";
+        BuggyApplication = No;
+        AutoLaunch = Yes;
+        Position = "0,6";
+        Lock = Yes;
+        PasteCommand = "wmacpi %s";
+        Command = wmacpi;
+      },
+      {
+        Forced = No;
+        Name = wmifinfo.wmifinfo;
+        DropCommand = "wmifinfo %d";
+        BuggyApplication = No;
+        AutoLaunch = Yes;
+        Position = "0,8";
+        Lock = Yes;
+        PasteCommand = "wmifinfo %s";
+        Command = wmifinfo;
+      },
+      {
+        Forced = No;
+        Name = wmitime.wmitime;
+        DropCommand = "wmitime %d";
+        BuggyApplication = No;
+        AutoLaunch = Yes;
+        Position = "0,2";
+        Lock = Yes;
+        PasteCommand = "wmitime %s";
+        Command = wmitime;
+      },
+      {
+        Forced = No;
+        Name = wmmon.wmmon;
+        DropCommand = "wmmon -s %d";
+        BuggyApplication = No;
+        AutoLaunch = Yes;
+        Position = "0,5";
+        Lock = Yes;
+        PasteCommand = "wmmon -s %s";
+        Command = "wmmon -s";
+      },
+      {
+        Forced = No;
+        Name = wmnd.wmnd;
+        DropCommand = "wmnd -i wlp2s0b1 %d";
+        BuggyApplication = No;
+        AutoLaunch = Yes;
+        Position = "0,7";
+        Lock = Yes;
+        PasteCommand = "wmnd -i wlp2s0b1 %s";
+        Command = "wmnd -i wlp2s0b1";
+      },
+      {
+        Forced = No;
+        Name = wmmon.wmmon;
+        DropCommand = "wmmon %d";
+        BuggyApplication = No;
+        AutoLaunch = Yes;
+        Position = "0,4";
+        Lock = Yes;
+        PasteCommand = "wmmon %s";
+        Command = wmmon;
+      },
+      {
+        Forced = No;
+        Name = wmtop.wmtop;
+        DropCommand = "wmtop %d";
+        BuggyApplication = No;
+        AutoLaunch = Yes;
+        Position = "0,3";
+        Lock = Yes;
+        PasteCommand = "wmtop %s";
+        Command = wmtop;
+      }
+    );
+  };
+  Clip = {
+    Forced = No;
+    Name = Logo.WMClip;
+    DropCommand = "wmsetbg -u -t %d";
+    BuggyApplication = No;
+    AutoLaunch = No;
+    Position = "0,0";
+    Lock = No;
+    Command = "-";
+  };
+  Drawers = ();
+  Workspaces = (
+    {
+      Clip = {
+        AutoRaiseLower = No;
+        AutoCollapse = No;
+        Applications = (
+          {
+            Forced = No;
+            Name = wmsystemtray0.wmsystemtray;
+            DropCommand = "wmsystemtray -s -w 1 %d";
+            BuggyApplication = No;
+            AutoLaunch = Yes;
+            Position = "0,1";
+            Lock = No;
+            PasteCommand = "wmsystemtray -s -w 1 %s";
+            Command = "wmsystemtray -s -w 1";
+            Omnipresent = No;
+          }
+        );
+        Collapsed = No;
+        AutoAttractIcons = No;
+        Lowered = Yes;
+      };
+      Name = Main;
+    }
+  );
+}

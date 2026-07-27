@@ -1,0 +1,35 @@
+{
+  "x-terminal-emulator.XTerm" = {
+    Icon = "wmaker-term.tif";
+  };
+  wprefs.WPrefs = {
+    AlwaysUserIcon = No;
+    Icon = "/usr/share/GNUstep/System/Applications/WPrefs.app/WPrefs.tiff";
+    NoResizebar = Yes;
+  };
+  "x-terminal-emulator.URxvt" = {
+    NoAppIcon = Yes;
+    AlwaysUserIcon = No;
+    NoHideOthers = Yes;
+  };
+  thunar.Thunar = {
+    NoAppIcon = Yes;
+    AlwaysUserIcon = No;
+  };
+  groupLeader.WPrefs = {
+    NoAppIcon = Yes;
+    Icon = "/usr/share/GNUstep/System/Applications/WPrefs.app/WPrefs.tiff";
+  };
+  helium.Helium = {
+    AlwaysUserIcon = No;
+    EmulateAppIcon = Yes;
+    Icon = "wmaker-ppp.tif";
+  };
+  geeqie.Geeqie = {
+    NoAppIcon = Yes;
+    AlwaysUserIcon = No;
+  };
+  Logo.WMDock = {
+    Icon = "wmaker-mech.tif";
+  };
+}

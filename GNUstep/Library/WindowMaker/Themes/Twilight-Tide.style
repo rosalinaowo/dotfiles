@@ -1,0 +1,76 @@
+{
+  TitleJustify = left;
+  WindowTitleFont = "MxPlus IBM VGA 9x16:slant=0:weight=80:width=100:pixelsize=14";
+  MenuTitleFont = "MxPlus IBM VGA 9x16:slant=0:weight=80:width=100:pixelsize=14";
+  MenuTextFont = "MxPlus IBM VGA 9x16:slant=0:weight=80:width=100:pixelsize=14";
+  IconTitleFont = "MxPlus IBM VGA 9x16:slant=0:weight=80:width=100:pixelsize=12";
+  ClipTitleFont = "MxPlus IBM VGA 9x16:slant=0:weight=80:width=100:pixelsize=12";
+  LargeDisplayFont = "MxPlus IBM VGA 9x16:slant=0:weight=80:width=100:pixelsize=24";
+
+  FTitleColor = "#F0FFF4";
+  FTitleBack = (
+    mvgradient,
+    "#4AABA8",
+    "#21668F",
+    "#0B2B50",
+    "#1D5567"
+  );
+
+  UTitleColor = "#82AEB4";
+  UTitleBack = (
+    mvgradient,
+    "#17394B",
+    "#07182C",
+    "#0B2B50",
+    "#17394B"
+  );
+
+  PTitleColor = "#CDEFD1";
+  PTitleBack = (
+    mvgradient,
+    "#286B5A",
+    "#102E39",
+    "#07182C",
+    "#215244"
+  );
+  ResizebarBack = (mdgradient, "#1D5567", "#0B2B50", "#05152D");
+
+  MenuTitleColor = "#F0FFF4";
+  MenuTitleBack = (
+    mvgradient,
+    "#4AABA8",
+    "#21668F",
+    "#0B2B50",
+    "#1D5567"
+  );
+  MenuTextColor = "#D8F2E0";
+  MenuDisabledColor = "#688692";
+  MenuTextBack = (dgradient, "#123B50", "#05152D");
+  HighlightColor = "#4AABA8";
+  HighlightTextColor = "#05152D";
+
+  IconBack = (
+    mdgradient,
+    "#ADF2BE",
+    "#4AABA8",
+    "#21668F",
+    "#0B2B50",
+    "#05152D"
+  );
+  IconTitleColor = "#F0FFF4";
+  IconTitleBack = "#123B50";
+  ClipTitleColor = "#ADF2BE";
+  CClipTitleColor = "#4AABA8";
+
+  FrameBorderWidth = 1;
+  FrameBorderColor = "#05152D";
+  FrameFocusedBorderColor = "#4AABA8";
+  FrameSelectedBorderColor = "#4AABA8";
+  SmoothWorkspaceBack = YES;
+  WorkspaceBack = (
+    fpixmap,
+    "1f844b63675d89527a539049f43eb917.jpg",
+    gray20
+  );
+  MenuStyle = flat;
+}
