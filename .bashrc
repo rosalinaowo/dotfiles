@@ -30,7 +30,7 @@ if [ -f /etc/os-release ]; then
 fi
 
 # Completion (Arch: bash-completion)
-if [ -f /usr/share/bash-completion/bash_completion ]; then
+if [[ -t 0 && -t 1 && -f /usr/share/bash-completion/bash_completion ]]; then
     . /usr/share/bash-completion/bash_completion
 fi
 
@@ -59,7 +59,7 @@ else
 fi
 
 export GPG_TTY=$(tty) # Import GPG Key
-export PATH="$PATH:$HOME/.local/bin"
+export PATH="$HOME/.local/bin:$PATH"
 export BROWSER='helium'
 export EDITOR='nvim'
 export VIMRUNTIME='/usr/share/nvim/runtime'
@@ -90,7 +90,12 @@ if [[ $ID =~ "arch" ]]; then
 elif [[ $ID =~ "debian" ]]; then
     alias update='sudo apt update && sudo apt upgrade'
 fi
-alias ytmp3='yt-dlp -x --continue --add-metadata --embed-thumbnail --audio-format mp3 --audio-quality 0 --metadata-from-title="%(artist)s - %(title)s" -o "%(title)s.%(ext)s"'
+ytmp3() {
+    yt-dlp -x --continue --add-metadata --embed-thumbnail \
+        --audio-format mp3 --audio-quality 0 \
+        --metadata-from-title='%(artist)s - %(title)s' \
+        -o '%(title)s.%(ext)s' "$@"
+}
 alias vencordinstaller='sh -c "$(curl -sS https://raw.githubusercontent.com/Vendicated/VencordInstaller/main/install.sh)"'
 alias untar='tar -xvf'
 
