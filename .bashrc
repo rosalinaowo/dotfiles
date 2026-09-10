@@ -55,7 +55,12 @@ if [ -x "$(command -v starship)" ]; then
         ;;
     esac
 else
-    PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    #PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    if [[ $EUID -eq 0 ]]; then
+    	PS1='\[\e[1;37;41m\] ROOT \[\e[0m\] \[\e[1;31m\]\u@\h\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]# '
+    else
+    	PS1='\[\e[1;32m\]\u@\h\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]\$ '
+    fi
 fi
 
 export GPG_TTY=$(tty) # Import GPG Key
