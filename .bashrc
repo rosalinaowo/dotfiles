@@ -1,3 +1,11 @@
+export PATH="$HOME/.local/bin:$PATH"
+export BROWSER='helium'
+export EDITOR='nvim'
+export VIMRUNTIME='/usr/share/nvim/runtime'
+
+# Stop here if the shell is non-interactive
+[[ $- != *i* ]] && return
+
 # WSL only commands
 if grep -qiE 'Microsoft|WSL' /proc/version; then
 	# ssh-agent
@@ -64,11 +72,6 @@ else
 fi
 
 export GPG_TTY=$(tty) # Import GPG Key
-export PATH="$HOME/.local/bin:$PATH"
-export BROWSER='helium'
-export EDITOR='nvim'
-export VIMRUNTIME='/usr/share/nvim/runtime'
-
 alias reload='source ~/.bashrc'
 alias grep='grep --color=auto'
 alias v='nvim'
