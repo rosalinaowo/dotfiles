@@ -98,14 +98,18 @@ if [[ $ID =~ "arch" ]]; then
 elif [[ $ID =~ "debian" ]]; then
     alias update='sudo apt update && sudo apt upgrade'
 fi
+alias vencordinstaller='sh -c "$(curl -sS https://raw.githubusercontent.com/Vendicated/VencordInstaller/main/install.sh)"'
+alias untar='tar -xvf'
+
 ytmp3() {
     yt-dlp -x --continue --add-metadata --embed-thumbnail \
         --audio-format mp3 --audio-quality 0 \
         --metadata-from-title='%(artist)s - %(title)s' \
         -o '%(title)s.%(ext)s' "$@"
 }
-alias vencordinstaller='sh -c "$(curl -sS https://raw.githubusercontent.com/Vendicated/VencordInstaller/main/install.sh)"'
-alias untar='tar -xvf'
+imgopt() {
+	magick "$1" -strip -interlace Plane -sampling-factor 4:2:0 -quality 82 "${1%.*}_optimized.jpg"
+}
 
 # If present, load extra config
 if [ -f "$HOME/.bash_extra" ]; then
